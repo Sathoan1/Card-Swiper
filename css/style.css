@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    background-color: rgba(255, 218, 185, 0.733);
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color:white;
+    padding: 3px;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50% ;
+    border: 4px solid peachpuff;
+}
+.card{
+border-radius: 25px;
+background-color: white;
+/* width: 320px; */
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    /* background-color: rgba(255, 218, 185, 0.733); */
+    padding: 40px 0;
+}
+.slide-content{
+    margin: 0 40px;
+    /* background-color: brown; */
+    overflow: hidden;
+    border-radius: 25px;
+}
+.image-content, .card-content{
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-content{
+    row-gap: 5px;
+    /* after the overlay code */
+    position: relative;
+    padding: 25px 0;
+
+}
+.name{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(135, 35, 35, 0.998);
+}
+.description{
+    font-size: 15px;
+    color: brown;
+    text-align: center;
+}
+.btn{
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(241, 85, 85);
+    padding: 5px 16px;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    background-color: brown;
+}
+.overlay{
+    position: absolute;
+    /* top and left gave the positioning of this effect */
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(232, 78, 78);
+    border-radius: 25px 25px 0 25px;
+
+}
+.overlay::before,
+.overlay::after{
+   position: absolute;
+   content: '';
+   right: 0;
+   bottom: -40px;
+   height: 40px;
+   width: 40px;
+   background-color: rgb(232, 78, 78);
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: white;
+}
+.swiper-Btn{
+    color: brown;
+    transition: color 0.3s ease;
+}
+.swiper-Btn:hover{
+    color: rgb(240, 139, 139);
+}
+.swiper-Btn::before,
+.swiper-Btn::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination-bullet{
+    background-color: brown;
+opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: rgb(247, 146, 146);
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-Btn{
+        display: none;
+    }
+    .slide-content{
+        margin: 0 10px;
+    }
+}
